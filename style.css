@@ -113,8 +113,7 @@ header{
 }
 .passenger-name{
     background-color: #808080; 
-    padding: 20px;
-    
+    padding: 20px; 
 }
 .ticket-data{
     flex-direction: column;

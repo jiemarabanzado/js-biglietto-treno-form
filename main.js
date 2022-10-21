@@ -13,7 +13,6 @@ function GetDistance() {
 function randomNumber(min, max) { 
     return Math.random() * (max - min) + min;
 }
-//var test=0.00;
 sessionStorage.setItem('tot',test)
 function Calcola(){
     var Ages=GetAge();
@@ -40,7 +39,6 @@ function Calcola(){
                     const fisso= (Km*0.21);
                     var SingleP = fisso;
                     document.getElementById('Distance').readOnly=true;
-                    //let element = document.createElement("P");
                     if(Ages=='Minorenne'){
                         SingleP= (fisso - (fisso/100*20)).toFixed(2);
                         document.getElementById('cost').innerHTML=`${SingleP}$`;
@@ -49,21 +47,12 @@ function Calcola(){
                         SingleP= (fisso - (fisso/100*40)).toFixed(2);
                         document.getElementById('cost').innerHTML=`${SingleP}$`;
                         document.getElementById('offer').innerHTML='Biglietto Over 65';
-                        //element.innerHTML = `${Name} <span>${fisso}$</span> ${SingleP}$`;
                         }else{
                             document.getElementById('offer').innerHTML='Biglietto standard';
                             document.getElementById('cost').innerHTML=`${SingleP}$`;}
                             document.getElementById('Age').value=null;
                             document.getElementById('Name').value=null;
-
                 } 
-
-               
-        
-    //document.getElementById("passeggeri").append(element);
-    //var sum=(parseFloat(sessionStorage.getItem('tot'))+SingleP);
-    //sessionStorage.setItem('tot',sum);
-        
 }
 function GetTotal(){
     document.getElementById('Name').readOnly=true;
