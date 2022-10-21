@@ -109,6 +109,7 @@ header{
 .ticket{
     border: 1px solid lightgray;
     height: 150px;
+    justify-content: space-between;
 }
 .passenger-name{
     background-color: #808080; 
@@ -122,4 +123,7 @@ header{
 .category{
     font-size: 1.1rem;
     flex-grow: 1;
+}
+#show{
+    display: none;
 }
