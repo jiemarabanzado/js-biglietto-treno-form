@@ -12,40 +12,41 @@
 </head>
 <body>
     <header>
-        <h1>Tickets Simulator</h1>
-        <div class="sconto">-20% under 18 / -40% over 65</div> 
+        <h1>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1> 
     </header>
-    
-    <div class="card ms-row">
-        <div class="data ">
+    <div class="card">
+        <div class="data ms-row">
+            <div class="info">
+                <h3>Nome Cognome</h3> 
+                <div class="text"><input type="text" id="Name"></div>
+            </div>
             <div class="journey">
-                <div>Dettagli Viaggio</div>
-                <div class="ms-row">
-                    <h3>Quanti km vuoi fare?</h3> 
-                    <div class="text"><input type="text" id="Distance"></div>
+                <h3>km da percorrere</h3> 
+                <div class="text"><input type="text" id="Distance"></div>
+            </div>
+            <div class="age">
+                <h3>Fascia d'età</h3> 
+                <div class="text">
+                    <select name="" id="Age">
+                        <option>Minorenne</option>
+                        <option>Maggiorenne</option>
+                        <option>Over 65</option>
+                    </select>
                 </div>
             </div>
-            <div class="Info">
-                <div>Dati passeggero</div>
-                <div class="ms-row">
-                    <h3>Nome:</h3> 
-                    <div class="text"><input type="text" id="Name"></div>
-                </div>
-                <div class="ms-row">
-                    <h3>Inserisci l'età passeggero:</h3> 
-                    <div class="text"><input type="text" id="Age"></div>
-                </div>
-            </div>
-            <div id="action">premi per aggiungere passeggero<button id="add"onclick="Calcola()">Aggiungi</button></div> 
-            <div >vai a riepilogo<button id="confirm" onclick="GetTotal()">Conferma</button></div>
-            <div ><a href="javascript:location.reload(true)">premi per reset</a></div>
         </div>
-        <div class="tickets">
-            <h3>Biglietti:</h3>
-            <div id="passeggeri">  
-            </div>
+        <div class="action ms-row">
+            <div class="btns"><button id="add"onclick="Calcola()">Genera</button></div> 
+            <!--<div >vai a riepilogo<button id="confirm" onclick="GetTotal()">Conferma</button></div>-->
+            <div class="btns"><button id="reset" onclick="location.reload(true)">Annulla</button></div>
+        </div>   
+    </div>         
+    <div class="tickets">
+        <h3>Biglietti:</h3>
+        <div id="passeggeri">  
         </div>
     </div>
+    
     <div class="summary">
         <div >Totale:</div>
         <div id="total"></div>
