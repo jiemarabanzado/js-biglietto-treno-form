@@ -22,36 +22,44 @@ function Calcola(){
     document.getElementById('id').innerHTML=Name;
     document.getElementById('wagon').innerHTML=parseInt(randomNumber(1,8));
     document.getElementById('code').innerHTML=parseInt(randomNumber(90000,100000));
-    if(isNaN(Km)){
+    if(Name==''){
+        alert('inserisci nome');
+        return;
+    }else if(Km==''){
         alert('km: inserisci un numero');
         return;
-    }else if(Km<0){alert('km: inserisci numero maggiore di 0')}
-        else{
-            document.getElementById('add').style.display='none';
-            document.getElementById('reset').innerHTML='Reset';
-            document.getElementById('show').style.display='block';
-            Km=Number(Km);
-            const fisso= (Km*0.21);
-            var SingleP = fisso;
-            document.getElementById('Distance').readOnly=true;
-            //let element = document.createElement("P");
-            if(Ages=='Minorenne'){
-                SingleP= (fisso - (fisso/100*20)).toFixed(2);
-                document.getElementById('cost').innerHTML=`${SingleP}$`;
-                document.getElementById('offer').innerHTML='Biglietto under 18';
-                }else if(Ages=='Over 65'){
-                SingleP= (fisso - (fisso/100*40)).toFixed(2);
-                document.getElementById('cost').innerHTML=`${SingleP}$`;
-                document.getElementById('offer').innerHTML='Biglietto Over 65';
-                //element.innerHTML = `${Name} <span>${fisso}$</span> ${SingleP}$`;
-                }else{
-                    document.getElementById('offer').innerHTML='Biglietto standard';
-                    document.getElementById('cost').innerHTML=`${SingleP}$`;}
-                    document.getElementById('Age').value=null;
-                    document.getElementById('Name').value=null;
+        }else if(isNaN(Km)){
+              alert('km: inserisci un numero');
+              return;
+              }else if(Km<0){alert('km: inserisci numero maggiore di 0')}
+                else{
+                    document.getElementById('add').style.display='none';
+                    document.getElementById('reset').innerHTML='Reset';
+                    document.getElementById('show').style.display='block';
+                    Km=Number(Km);
+                    const fisso= (Km*0.21);
+                    var SingleP = fisso;
+                    document.getElementById('Distance').readOnly=true;
+                    //let element = document.createElement("P");
+                    if(Ages=='Minorenne'){
+                        SingleP= (fisso - (fisso/100*20)).toFixed(2);
+                        document.getElementById('cost').innerHTML=`${SingleP}$`;
+                        document.getElementById('offer').innerHTML='Biglietto under 18';
+                        }else if(Ages=='Over 65'){
+                        SingleP= (fisso - (fisso/100*40)).toFixed(2);
+                        document.getElementById('cost').innerHTML=`${SingleP}$`;
+                        document.getElementById('offer').innerHTML='Biglietto Over 65';
+                        //element.innerHTML = `${Name} <span>${fisso}$</span> ${SingleP}$`;
+                        }else{
+                            document.getElementById('offer').innerHTML='Biglietto standard';
+                            document.getElementById('cost').innerHTML=`${SingleP}$`;}
+                            document.getElementById('Age').value=null;
+                            document.getElementById('Name').value=null;
 
-        }            
-    
+                } 
+
+               
+        
     //document.getElementById("passeggeri").append(element);
     //var sum=(parseFloat(sessionStorage.getItem('tot'))+SingleP);
     //sessionStorage.setItem('tot',sum);
