@@ -60,5 +60,4 @@ function GetTotal(){
     var tot=(parseFloat(sessionStorage.getItem('tot')));
     tot=tot.toFixed(2);
     document.getElementById('total').innerHTML=`${tot}$`;
-
 }

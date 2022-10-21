@@ -33,6 +33,9 @@ body{
     border-radius:5px ;
     margin-right: 20px;
 }
+#add:hover{
+    border: 1px solid coral;
+}
 #reset{
     margin-bottom: 30px;
     padding: 5px;
@@ -43,6 +46,9 @@ body{
     border: 1px solid #808080;
     border-radius:5px ;
     color:#b91450;
+}
+#reset:hover{
+    border: 1px solid coral;
 }
 p{
     font-size: 2rem;
